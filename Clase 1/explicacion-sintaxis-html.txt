@@ -1,0 +1,51 @@
+
+Sintaxis HTML:
+
+Etiquetas:
+
+Si quiero hacer un boton en HTML esto se representa con la etiqueta:
+<button>Download</button>
+
+Existen 2 tipos de etiqueta:
+
+De cierre:
+    <button></button>
+
+De autocierre:
+    <img/>
+    o puede ser (es lo mismo)
+    <img>
+
+Lo que determina el tipo de etiqueta es el elemento de la etiqueta:
+
+<button></button> => el elemento es "button"
+<img/> => el elemento es "img"
+<h1></h1> => el elemento es "h1"
+<p></p> => cierre
+<input /> => autocierre
+
+El elemento representa el significado o funcionalidad de la etiqueta
+Tambien define el TIPO DE ETIQUETA
+
+Cada etiqueta puede recibir atributos, los atributos son configuraciones de la etiqueta
+Depende de cada elemento los atributos disponibles
+
+<img src="https://cdn.blog.paulinacocina.net/wp-content/uploads/2018/05/empanada2.png">
+En este ejemplo estamos configurando el artributo SRC que determina la fuente de la imagen
+
+
+Anidamiento:
+Es la caracteristica de que una etiqueta pueda contener otra etiqueta
+
+Indentacion:
+Estructurar la jerarquia de nuestro anidamiento de forma visual
+
+
+Estructura base:
+Toda pagina web debe contener su html dentro de la etiqueta html y debe dividirse en head y body.
+
+ejemplo
+<html>
+    <head></head> => Sirve para configurar la pagina
+    <body></body> => Sirve para configurar el contenido visual de la pagina
+</html>
