@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <!-- 
+    Formularios 
+    -->
+    <!-- 
+    Iniciar sesion
+        - mail
+        - password
+    -->
+    <form>
+        <div>
+            <!-- Describir / dar instrucciones de que debe colocarse en un x campo -->
+            <!-- Siempre que tengas un input deberia haber un label -->
+            <label for="email">Ingrese su email:</label>
+
+            <!-- 
+            Con input creamos campos del formulario
+            Los campos pueden ser de distintos tipos
+            -->
+            <input type="email" id="email" name="email" placeholder="joedoe@mail.com">
+        </div>
+        <div>
+            <label for="password">Ingrese su contraseña</label>
+            <input type="password" id="password" name="password" placeholder="password-123">
+        </div>
+
+
+
+        <div>
+            <label for="mantener-sesion">Mantener mi sesion iniciada</label>
+            <input type="checkbox" name="mantener-sesion" id="mantener-sesion">
+        </div>
+
+        <!-- 
+        input radio sirve para hacer seleccion unica
+        -->
+        <div>
+            <label>Seleccione la opcion correcta, cuanto es 1 + 1?</label>
+            <div>
+                <label for="opcion-a">A). 1</label>
+                <input type="radio" id="opcion-a" name="pregunta-capcha" checked>
+            </div>
+            <div>
+                <label for="opcion-b">B). 2</label>
+                <input type="radio" id="opcion-b" name="pregunta-capcha">
+            </div>
+            <div>
+                <label for="opcion-c">C). 3</label>
+                <input type="radio" id="opcion-c" name="pregunta-capcha">
+            </div>
+        </div>
+
+        <div>
+            <label for="birthday">Cuando naciste</label>
+            <input type="date" >
+        </div>
+
+        <div>
+            <label for="country">Pais de origen:</label>
+            <select name="country" id="country">
+            
+                <option value="">Argentina</option>
+                <option value="">Francia</option>
+                <option value="">Brasil</option>
+                <option value="" selected disabled>No seleccionado</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="description">Descripcion:</label>
+            <textarea name="description" id="description" rows="10" cols="30" ></textarea>
+        </div>
+
+
+        <!-- type submit dentro de un form activa el envio de ese form -->
+        <button type="submit">Iniciar sesion</button>
+    </form>
+
+
+</body>
+</html>
