@@ -1,85 +1,37 @@
 /* 
-Cascade Style Sheet (CSS)
-
-con h1{} seleccionamos a todos los h1 de mi pagina, dentro de las llaves definimos que estilos afectaran a ese selector
+@import indica al navegador que debe descargar cierta Hoja de estilos desde el CSS
+Desde este import cargamos el CSS de google fonts para las fuentes que seleccionamos
 */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 *{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 h1{
-    color: red;
-    background-color: black;
-    text-align: center;
-}
+    /* 
+    Propiedades de fuente/texto
+    */
+    color: #2525ce; /* Cambiar el color de un texto */
+    font-size: 26px;/* Tamaño de la fuente */
+    /* letter-spacing: 40px;  *//* Espaciado entre letras */
+    /* word-spacing: 40px; *//* Espaciado entre palabras */
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
 
-.titulo-especial{
-    color: blue;
-    text-align: left;
-    background-color: black;
-    font-size: 36px;
-}
-
-.titulo-grande{
-    font-size: 52px;
-}
-
-.titulo-normal{
-    font-size: 36px;
-}
-
-.titulo-chiquito{
-    font-size: 24px;
 }
 
 
-/* 
-CSS Es un lenguaje que usamos para dar estilos a los elementos de la web
-CSS es un lenguaje que funciona con selectores
-Los selectores nos permiten seleccionar grupos de elementos 
-
-- Universales: *, todos los elementos de la pagina
-- De elemento: se llama por el mismo nombre del elemento y selecciona a ese elemento.
-- De clase: . + nombre de clase, selecciona a los elementos de x clase.
-- De id: # + nombre de id, selecciona a un elemento por id (MALA PRACTICA)
-*/
-
-/* Selecciono a todos los parrafos */
 p{
-    font-size: 14px;
-}
-
-
-#especial{
-    color: red;
+    font-size: 12px;
+    text-align: justify; /* Nos permite alinear el texto */
+    /* line-height: 36px; */ /* Interlineado (altura de reglon */
+    font-weight: 300;
 }
 
 /* 
-Especificidad: 
-
-Mientras mas especifico es un selector mas importancia tendra este selector
-
-(+) especificidad
-- id
-- clase
-- elemento
-- universal
-(-) especificidad
-
-Si un selector disputa una propiedad/varias con otro primero se evualara la especificidad de cada selector, si uno resulta mas especifico que el otro entonces tendra mas importancia
-
-SI la especificidad de los selectores es LA MISMA quien desempata que propiedad es mas importante que otra es la cascada
-Basicamente el ultimo en definir tiene mas importancia
+font-weight nos permite definir que tan negrita es una fuente
+OJO, las opciones disponibles de valores suelen ser de 100 en 100
+PERO quien define realmente cuantas variantes de peso tenes disponibles es la misma fuente
 */
-
-
-button{
-    color: yellow;
-    background-color: black;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-
-.btn{
-    background-color: aqua;
-}
