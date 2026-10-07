@@ -19,7 +19,12 @@ h1{
     /* word-spacing: 40px; *//* Espaciado entre palabras */
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
+    /* text-decoration: underline solid 10px rgb(255, 5, 5); */
+    background-color: black;
+    text-shadow: 0px 0px 3px rgb(140, 140, 140);
+    font-style: italic; /* Podemos hacer italica a una fuente */
 
+    width: 100px;
 }
 
 
@@ -35,3 +40,59 @@ font-weight nos permite definir que tan negrita es una fuente
 OJO, las opciones disponibles de valores suelen ser de 100 en 100
 PERO quien define realmente cuantas variantes de peso tenes disponibles es la misma fuente
 */
+
+a{
+    text-decoration: none;
+    color:black;
+    background-color: rgb(216, 182, 249);
+    
+    display: inline-block;
+    width: 50px;
+    height: 60px;
+}
+
+
+/* 
+Clase que viene:
+Box modeling
+- padding
+- margin
+- box sizing
+- border-radius
+- box-shadow
+
+Flexbox
+
+Sig:
+Position
+
+Sig:
+Responsive
+
+Practica real con el profe
+TP Intermedio de HTML y CSS (Entregable Y Obligatorio) Tiene recuperatorio
+*/
+
+/* 
+Naturalmente todos los elementos se pueden categorizar en:
+
+- inline:
+    - Se pueden alinear si el ancho restante lo permite
+    - ocupan solo su contenido
+    - NO se puede modificar sus dimensiones
+    ej: a
+- block:
+    - No se alinean, ocupan todo el bloque
+    - Se pueden modificar las dimensiones
+    ej:
+        - h1...h6, li, ul, ol, div, (cualquier tag semantico), form
+- inline-block:
+    - Se pueden alinear si el ancho restante lo permite
+    - Se pueden modificar las dimensiones
+*/
+
+
+button{
+    width: 100px;
+    height: 50px;
+}
