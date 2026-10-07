@@ -1,4 +1,6 @@
 /* 
+Cascade Style Sheet (CSS)
+
 con h1{} seleccionamos a todos los h1 de mi pagina, dentro de las llaves definimos que estilos afectaran a ese selector
 */
 *{
@@ -15,6 +17,7 @@ h1{
     color: blue;
     text-align: left;
     background-color: black;
+    font-size: 36px;
 }
 
 .titulo-grande{
@@ -24,6 +27,11 @@ h1{
 .titulo-normal{
     font-size: 36px;
 }
+
+.titulo-chiquito{
+    font-size: 24px;
+}
+
 
 /* 
 CSS Es un lenguaje que usamos para dar estilos a los elementos de la web
@@ -44,4 +52,34 @@ p{
 
 #especial{
     color: red;
+}
+
+/* 
+Especificidad: 
+
+Mientras mas especifico es un selector mas importancia tendra este selector
+
+(+) especificidad
+- id
+- clase
+- elemento
+- universal
+(-) especificidad
+
+Si un selector disputa una propiedad/varias con otro primero se evualara la especificidad de cada selector, si uno resulta mas especifico que el otro entonces tendra mas importancia
+
+SI la especificidad de los selectores es LA MISMA quien desempata que propiedad es mas importante que otra es la cascada
+Basicamente el ultimo en definir tiene mas importancia
+*/
+
+
+button{
+    color: yellow;
+    background-color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.btn{
+    background-color: aqua;
 }
