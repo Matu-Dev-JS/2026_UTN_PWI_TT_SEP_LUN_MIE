@@ -47,8 +47,8 @@ a{
     background-color: rgb(216, 182, 249);
     
     display: inline-block;
-    width: 50px;
-    height: 60px;
+  /*   width: 50px;
+    height: 60px; */
 }
 
 
@@ -95,4 +95,16 @@ Naturalmente todos los elementos se pueden categorizar en:
 button{
     width: 100px;
     height: 50px;
+}
+
+.btn{
+    display: inline-block;
+
+
+    border-radius: 5px;
+    background-color: #2525ce;
+    text-align: center;
+    color: white;
+    padding: 5px;
+    border: 1px solid black;
 }
