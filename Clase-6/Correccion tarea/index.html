@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo UTN</title>
+</head>
+
+    <body>
+        
+
+        <section>
+
+            <h1> Formulario </h1>
+    
+            <form>
+                <div>
+        
+                    <div>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre">
+                    </div>
+        
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+        
+                    <div>
+                        <label for="contraseña">Contraseña:</label>
+                        <input type="password" id="contraseña" name="password">
+                    </div>
+        
+                </div>
+        
+                <div>
+        
+                    <span>Ingrese los lenguajes que sabe manejar</span>
+        
+                    <ul>
+        
+                        <li>
+                            <label for="typescript">Typescript</label>
+                            <input type="checkbox" id="typescript" name="lang_know">
+                        </li>
+        
+                        <li>
+                            <label for="javascript">javascript</label>
+                            <input type="checkbox" id="javascript" name="lang_know">
+                        </li>
+        
+                        <li>
+                            <label for="C">C</label>
+                            <input type="checkbox" id="C" name="lang_know">
+                        </li>
+        
+                        <li>
+                            <label for="c++">C++:</label>
+                            <input type="checkbox" id="c++" name="lang_know">
+                        </li>
+        
+                        <li>
+                            <label for="P">PhP</label>
+                            <input type="checkbox" id="P" name="lang_know">
+                        </li>
+        
+                        <li>
+                            <label for="PY">Python:</label>
+                            <input type="checkbox" id="PY" name="lang_know">
+                        </li>
+        
+                        <li>
+                            <label for="Cobol">Cobol</label>
+                            <input type="checkbox" id="Cobol" name="lang_know">
+                        </li>
+        
+                    </ul>
+        
+                </div>
+        
+                <div>
+        
+                    <span>Que opina sobre la sintaxis y semantica del lenguaje C</span>
+        
+                    <ol>
+                        <li>
+                            <label for="respuesta0">printf("muy bueno\n");</label>
+                            <input type="radio" id="respuesta0" name="respuesta">
+                        </li>
+        
+                        <li>
+                            <label for="respuesta1">bueno;</label>
+                            <input type="radio" id="respuesta1" name="respuesta">
+                        </li>
+        
+                        <li>
+                            <label for="respuesta2">intermedio</label>
+                            <input type="radio" id="respuesta2" name="respuesta">
+                        </li>
+        
+                        <li>
+                            <label for="respuesta3">no tan bueno</label>
+                            <input type="radio" id="respuesta3" name="respuesta">
+                        </li>
+        
+                        <li>
+                            <label for="respuesta4">horrendo</label>
+                            <input type="radio" id="respuesta4" name="respuesta">
+                        </li>
+        
+                    </ol>
+        
+                </div>
+        
+                <div>
+                    <label for="comentario">Comentarios:</label>
+        
+                    <textarea name="texto" id="comentario" rows="5" cols="40"></textarea>
+        
+                </div>
+        
+                <div>
+        
+                    <label for="foto">Ingrese su foto:</label>
+                    <input type="file" id="foto" name="foto" accept="image/*">
+        
+                </div>
+        
+                <div>
+                    <label for="pais">Nacionalidad:</label>
+        
+                    <select name="nacionalidad" id="pais">
+                        <option value="ar">Argentino</option>
+                        <option value="al">Aleman</option>
+                        <option value="br">Brasilero</option>
+                        <option value="fr">Frances</option>
+                        <option value="es">Español</option>
+                        <option value="ur">Uruguayo</option>
+                        <option value="ca">Canadiense</option>
+                        <option value="no">Noruego</option>
+                        <option value="ru">Ruso</option>
+                        <option value="" selected disabled>No seleccionado</option>
+        
+                    </select>
+                </div>
+        
+                <div>
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </section>
+
+    </body>
+
+</html>
