@@ -1,0 +1,72 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.padre{
+    background-color: rgb(76, 133, 14);
+    height: 100vh;
+   /*  width: 50vw;  */
+    /* 
+    Viewport height  
+    100vh = 100% del alto del viewport
+    */
+
+    /* 
+    Cuando colocamos display: flex el elmento padre y sus hijos pasan a ser elementos flexibles, eso quiere decir que ya no tienen su display natural (inline, inline-block, block).
+    Podriamos decir que los elementos hijos de una flexbox se comportan de una forma SIMILAR a la de un inline block
+    Los elementos flexibles tienen acceso a nuevas propiedades:
+        - flex-direction
+        - justify-content
+        - aling-items
+        - gap
+        - flex-wrap
+    */
+    /* 
+    Si la flex direction es:
+        row:
+            justify-content: Afecta al eje horizontal
+            aling-items: Afecta al eje vertical
+        column
+            justify-content: Afecta al eje vertical
+            aling-items: Afecta al eje horizontal
+    */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* 
+    space-evenly: divide de forma equitativa el espacio restante entre los hijos y bordes
+    space-around: divide el espacio entre los hijos y al los bordes divide la mitad del espacio entre los hijos
+    space-between: divide el espacio sobrante de forma equitativa entre los hijos (nada para los bordes)
+    */
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.hijo{
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.hijo_1{
+    background-color: red;
+}
+
+.hijo_2{
+    background-color: rgb(255, 247, 0);
+}
+
+.hijo_3{
+    background-color: rgb(0, 13, 255);
+}
+
+/* 
+Flexbox
+Es una tecnologia de CSS que nos permite acomodar los elementos en la pagina
+En flexbox existe un concepto clave: "UN PADRE QUE ACOMODA A SUS HIJOS"
+Flexbox es UNIDIMENSIONAL eso quiere decir que los hijos se pueden acomodar horizontalmente en fila o verticalmente en columnas
+*/
