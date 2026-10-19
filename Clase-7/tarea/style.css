@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+/* Normalizacion del CSS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', sans-serif;
+}
+
+body {
+    background-color: #F8F9FA;
+}
+
+.faq {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 48px;
+    padding: 20px 0 20px 0;
+}
+
+.subtitle {
+    font-size: 16px;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 55px;
+
+}
+
+.qs-container{
+    display: flex;
+    flex-direction: column;
+    width: 936px;
+}
+
+.qs {
+    flex-direction: row;
+    justify-content: space-between;
+    display: flex;
+   
+    align-items: center;
+    padding: 20px 0 20px 0px;
+    font-size: 16px;
+    border-bottom: 1px solid #0000001a;
+}
+
+.qs:last-child{
+    border-bottom: none;
+}
+
+
+.qs-interior {
+    flex-direction: row;
+    display: flex;
+}
+
+.qs-plus {
+    font-size: 25px;
+    font-weight: 100;
+}
