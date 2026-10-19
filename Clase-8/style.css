@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #1C1F25;
+}
+
+a{
+    text-decoration: none;
+    color: white
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 72px;
+    padding: 0 24px;
+}
+
+nav{
+    display: flex;
+    gap: 24px;
+}
+
+/* Las anclas que sean hijas del nav */
+nav a{
+    font-size: 13px;
+}
+
+.btn-login{
+    background-color: #222733;
+    border: 1px solid #2B303C;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 13px;
+}
+
+/* 
+Cuando estemos con el cursor encima del elemento los estilos seran 
+*/
+.btn-login:hover{
+    background-color: #283044;
+    border: 1px solid #373E52;
+}
+
+.icon svg{
+ /*    width: 107px;
+    height: 32px; */
+}
+
+@media screen and (max-width: 1280px) {
+    header{
+        gap: 40px;
+    }
+    nav{
+        flex: 1;
+        justify-content: start;
+        
+    }
+
+
+}
+
+/* @media screen and (max-width: 979px) {
+    body{
+        background-color: green;
+    }
+} */
+
+/* Cuando la pagina mida menos de 480px este estilo de css se debe aplicar */
+/* @media screen and (max-width:480px) {
+    body{
+        background-color: red;
+    }
+} */
+
+
+/* 320px (igual deberian ver 280px) a 2000px */
