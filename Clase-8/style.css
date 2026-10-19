@@ -55,11 +55,20 @@ Cuando estemos con el cursor encima del elemento los estilos seran
     height: 32px; */
 }
 
+.btn-menu{
+    display: none;
+}
+
+
 @media screen and (max-width: 1280px) {
     header{
         gap: 40px;
     }
     nav{
+        /* 
+        flex nos permite hacer fracciones
+        Es una propiedad flex-hijo eso quiere decir que se aplica sobre los hijos de una flexbox (No sobre el padre)
+        */
         flex: 1;
         justify-content: start;
         
@@ -67,6 +76,31 @@ Cuando estemos con el cursor encima del elemento los estilos seran
 
 
 }
+
+@media screen and (max-width: 1025px) {
+    nav{
+        display: none;
+    }
+    .btn-menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        background-color: transparent;
+        color: white;
+    }
+    .header-actions{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .btn-login{
+        display: none;
+    }
+}
+
 
 /* @media screen and (max-width: 979px) {
     body{
