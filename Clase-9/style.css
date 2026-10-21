@@ -6,6 +6,24 @@
     padding: 0;
 }
 
+@keyframes to-right{
+    0%{
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.title{
+    font-family: sans-serif;
+    animation-name: to-right;
+    animation-duration: 500ms;
+    animation-timing-function: linear;
+}
+
 .padre{
     height: 100vh;
     background-color: greenyellow;
@@ -33,18 +51,24 @@
 
 .hijo-2{
     background-color: blue;
-    position: fixed;
+    
+    transition: 100ms linear;
 
-    /* bottom: 0px; */
-   /*  left: 0px; */
-
-    /* bottom: 60px; */
-    top:0px;
-    right: 0px;
-   /*  z-index: 1; */
-    /* opacity: 0.1; */
-    /* filter: brightness(0.5); */
 }
+
+/* 
+Una transicion es un cambio de estado a lo largo del tiempo
+*/
+.hijo-2:hover{
+    background-color: blueviolet;
+    transition: 300ms ease-out;
+    width: 300px;
+   /*  transform: translateY(-100px); */
+
+   /*  transform: scale(1.5); */
+    transform: rotate(45deg);
+}
+
 
 .hijo-3{
     background-color: cadetblue;
@@ -124,4 +148,38 @@ header{
     position: sticky;
     top: 100px;
     z-index: 1000;
+}
+
+
+
+.spinner-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+
+/* 
+Esta es la forma de definir una animacion
+*/
+@keyframes loading-spinner{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.spinner{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: transparent;
+    border-top: black 1px solid;
+    animation-name: loading-spinner;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
