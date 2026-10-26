@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* 
+Variables de CSS 
+*/
+:root{
+    --primary-color: #3FA9F5;
+    --secondary-color: #000000;
+}
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.title{
+    text-align: center;
+}
+
+.product-section{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.product-list{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.product-card{
+    flex: 1;
+}
+
+.product-card__image-container{
+    width: 100%;
+    position: relative;
+}
+
+.product-card__image-container img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product-card__discount-badge{
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    padding: 4px 6px;
+    color: white;
+    font-weight: 700;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    font-size: 12px;
+}
+
+.product-card__info-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card__brandname{
+    font-size: 14px;
+}
+
+.product-card__title{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.product-card__price-container{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.product-card__original-price{
+    font-size: 11px;
+    text-decoration: 1px solid line-through;
+}
+
+.product-card__real-price{
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.product-card__quotas{
+    font-size: 10px;
+}
+
+.product-card__buy_btn{
+    font-size: 12px;
+    color:white;
+    background-color: var(--secondary-color);
+    padding: 2px 4px;
+    border-radius: 4px;
+    border: none;
+    align-self: flex-start;
+    opacity: 0;
+    transition: 500ms ease-out;
+}
+
+.product-card:hover .product-card__buy_btn{
+    opacity: 1;
+    transition: 300ms ease-in;
+}
+
+@media screen and (max-width: 768px){
+    .title{
+        font-size: 20px;
+    }
+    .product-list{
+        overflow-x: scroll;
+        padding-bottom: 20px;
+    }
+    .product-card{
+        flex: none;/* quite el flex: 1 de arriba */
+        flex-shrink: 0;/* factor de achicamiento */
+        width: 70vw;
+    }
+
+    .product-card__buy_btn{
+        opacity: 1;
+    }
+}
