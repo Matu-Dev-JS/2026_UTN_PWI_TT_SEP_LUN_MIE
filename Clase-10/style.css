@@ -18,6 +18,7 @@ Variables de CSS
 
 .title{
     text-align: center;
+    font-family: "Google Sans", sans-serif;
 }
 
 .product-section{
@@ -96,7 +97,7 @@ Variables de CSS
     font-size: 12px;
     color:white;
     background-color: var(--secondary-color);
-    padding: 2px 4px;
+    padding: 2px calc(2px * 2);
     border-radius: 4px;
     border: none;
     align-self: flex-start;

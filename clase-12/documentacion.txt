@@ -1,0 +1,3 @@
+Un lenguaje de programacion esta hecho por seres humanos PARA seres humanos
+JS es un lenguaje de programacion Interpretado de alto nivel
+JS es interpretado por el navegador (y tiene su monopolio)
