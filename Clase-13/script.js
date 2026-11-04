@@ -96,3 +96,57 @@ let b = 5
     //Resta
     let resultado = a - b
 } */
+
+
+//Funciones Nativas
+/* 
+Acciones que ya trae el mismo lenguaje
+*/
+//Dar un mensaje por consola
+//console.log("hola mundo")
+
+
+//alert: Sirve para mostrar en pantalla un pop up con un mensaje
+//alert('test')
+
+//prompt: Sirve para que el usuario ingrese informacion en un pop up
+/* 
+Si el usuario da a cancelar el prompt devuelve null
+Si el usuario da a aceptar el prompt devuelve string
+*/
+/* 
+let edad = '19'
+
+alert("Ahora tenes " + edad + ' años')
+ */
+
+/* 
+Truthy: Todo valor que al ser pasado a booleano de true
+    'pepe' => Boolean('pepe') => true
+FALSY: false, 0, null, NaN, undefined, ''
+
+
+Condiciones
+condicionar el flujo de ejecucion del programa
+IF recibe una condicion y si esa condicion se cumple (Truthy) entonces el IF ejecuta el bloque de codigo
+ELSE va siempre despues de un IF y se ejecuta si el IF no se ejecuto
+*/
+
+let edad = prompt('Ingresa tu edad')
+
+/* if( edad ){
+    alert("Edad vale algo")
+}
+else{
+    alert('Edad no vale nada')
+} */
+
+if( edad >= 18 ){
+    alert("Sos mayor de edad (al 100%)")
+}
+else if(edad >= 16 && edad < 18){
+    alert("Sos mayor de edad (al 60%)")
+}
+else{
+    alert('Sos menor de edad, no podes ingresar')
+}
