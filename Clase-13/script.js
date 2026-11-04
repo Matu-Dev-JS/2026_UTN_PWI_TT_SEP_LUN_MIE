@@ -132,7 +132,7 @@ IF recibe una condicion y si esa condicion se cumple (Truthy) entonces el IF eje
 ELSE va siempre despues de un IF y se ejecuta si el IF no se ejecuto
 */
 
-let edad = prompt('Ingresa tu edad')
+/* let edad = prompt('Ingresa tu edad') */
 
 /* if( edad ){
     alert("Edad vale algo")
@@ -141,7 +141,7 @@ else{
     alert('Edad no vale nada')
 } */
 
-if( edad >= 18 ){
+/* if( edad >= 18 ){
     alert("Sos mayor de edad (al 100%)")
 }
 else if(edad >= 16 && edad < 18){
@@ -149,7 +149,7 @@ else if(edad >= 16 && edad < 18){
 }
 else{
     alert('Sos menor de edad, no podes ingresar')
-}
+} */
 
 /* 
 Selector del dia de la semana
@@ -164,4 +164,62 @@ Solicitar al usuario via prompt un numero del 1 a 7
         - 7: Domingo
     El formato de la respuesta por alerta sera "El dia seleccionado es " + nombre_dia_seleccionado
 */
-let nombre = 'jose'
+/* 
+let numero_dia_seleccionado = prompt("ingresa un numero del (1 al 7)")
+
+let nombre_dia_seleccionado = null
+
+if(numero_dia_seleccionado === '1'){
+    nombre_dia_seleccionado = 'lunes'
+}
+else if(numero_dia_seleccionado === '2'){
+    nombre_dia_seleccionado = 'martes'
+}
+
+alert("El dia seleccionado es " + nombre_dia_seleccionado)
+ */
+
+/* 
+Solicita el nombre al usuario
+Si me llamo jose decir "Hola jefe"
+Si me llamo sandra decir "Todo bien Jefa?"
+Si no es ninguno de esos decir "Quien sos?"
+*/
+/* let nombre = prompt('Dame tu nombre?')
+
+if(nombre === 'jose'){
+    console.log("Hola Jefe")
+}
+else if(nombre === 'sandra'){
+    console.log("Todo bien jefa?")
+}
+else {
+    console.log("Quien sos?")
+}
+ */
+
+
+
+//let precio = 5000
+
+/* 
+Alertar "Esto es caro!" si vale mas de 2500
+Sino decir "Es un precio economico"
+*/
+
+let precio = prompt("Ingrese el precio del producto");
+if (precio > 2500) {
+    alert("Es muy caro");
+}
+else{
+    alert("Es un precio economico")
+}
+
+/* if(condicion){
+    //Bloque de accion
+}
+else {
+    //Bloque de accion
+    alert("algo")
+}
+ */
