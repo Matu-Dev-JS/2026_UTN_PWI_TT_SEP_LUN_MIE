@@ -150,3 +150,18 @@ else if(edad >= 16 && edad < 18){
 else{
     alert('Sos menor de edad, no podes ingresar')
 }
+
+/* 
+Selector del dia de la semana
+Solicitar al usuario via prompt un numero del 1 a 7
+    Dependiendo del numero del dia seleccionado por el usuario va a variar la respuesta:
+        - 1: Lunes
+        - 2: Martes
+        - 3: Miercoles
+        - 4: Jueves
+        - 5: Viernes
+        - 6: Sabado
+        - 7: Domingo
+    El formato de la respuesta por alerta sera "El dia seleccionado es " + nombre_dia_seleccionado
+*/
+let nombre = 'jose'
