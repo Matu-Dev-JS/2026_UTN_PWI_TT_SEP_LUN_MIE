@@ -89,20 +89,71 @@ for (
 Bucle while
 */
 
-let password = 'pepe'
+/* let password = 'pepe'
 let password_escrita = prompt("ingresa una contraseña")
 
 while(password_escrita != password){
     password_escrita = prompt('Error, Ingresa nuevamente la contraseña')
 }
 
-alert('Contraseña correcta')
+alert('Contraseña correcta') */
 
 /* 
 La palabra prohebida
 Solicitar al usuario una palabra
 Mientras el usuario no diga 'voldermort' volver a pedirle una palabra. Si lo escribio, decir 'Ese nombre no se puede decir'
 
+
+*/
+/* 
+let palabra_prohibida ="voldemort"
+let palabra_elegida = prompt("Ingrese una palabra")
+while(palabra_elegida != palabra_prohibida) {
+    palabra_elegida = prompt("Todo correcto, Ingrese una palabra")
+
+}
+
+alert("Elegiste la palabra prohebida!!") */
+
+/* 
 Solicitar un numero positivo
 Vamos a solicitar por prompt un dato, ese dato debe ser si o si un numero positivo que no puede ser NaN. Si no cumple volver a solicitar
 */
+
+/* 
+let numero = prompt("ingrese un numero positivo")
+while (numero < 0) {
+    numero = prompt("ingrese un numero positivo")
+}
+ */
+
+/* 
+NaN es incomparable, nadie es igual a NaN nisiquiera el mismo NaN
+Para eso usamos la funcion isNaN()
+
+prompt => Devuelve un string O null
+    Cuales son todas las posibilidades:
+        1. devolvio un null => error
+        2. devolvio un string vacio => error
+        3. devolvio espacios vacios => error
+        
+        4. devolvio un string normal => error
+        
+        5. devolvio un string numerico => solo verificar que sea positivo
+        
+*/
+let numero_crudo = prompt('Ingresa un numero')
+
+while(
+    numero_crudo === null 
+    || 
+    numero_crudo.trim() === '' 
+    || 
+    isNaN(numero_crudo)
+    ||
+    Number(numero_crudo) < 0
+){
+    alert("Numero incorrecto")
+    numero_crudo = prompt('Ingresa nuevamente un numero')
+}
+
