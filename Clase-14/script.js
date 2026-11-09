@@ -65,3 +65,19 @@ alert("El promedio resultante es " + (sumatoria / cantidad_de_notas))
 Pedir una contraseña, si la contraseña es correcta deberemos decir por alerta ¨Contraseña correcta¨ y cortar el bucle.
 El limite de contraseñas es 5
 */
+
+let intentos_max = 5;
+const password = 'Mora123';
+for (
+    let iterador = 1;
+    iterador <= intentos_max;
+    iterador = iterador + 1
+) {
+    let contraseña_ingresada = prompt("Ingrese password");
+    if (contraseña_ingresada === password) {
+        alert("Contraseña correcta");
+        break;
+    } else {
+        alert("Contraseña incorrecta");
+    }
+}
