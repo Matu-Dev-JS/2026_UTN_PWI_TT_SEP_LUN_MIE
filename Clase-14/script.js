@@ -142,7 +142,7 @@ prompt => Devuelve un string O null
         5. devolvio un string numerico => solo verificar que sea positivo
         
 */
-let numero_crudo = prompt('Ingresa un numero')
+/* let numero_crudo = prompt('Ingresa un numero')
 
 while(
     numero_crudo === null 
@@ -155,5 +155,73 @@ while(
 ){
     alert("Numero incorrecto")
     numero_crudo = prompt('Ingresa nuevamente un numero')
+} */
+
+
+/* 
+FUNCIONES
+Guardar bloques de codigo en memoria
+*/
+
+
+/* 
+Definiendo una funcion llamada saludar
+*/
+/* function saludar(){
+    alert("Hola a todos!")
+} */
+
+
+//Invocamos la funcion
+/* saludar()
+saludar() */
+
+/* 
+Los parametros nos permiten dar informacion a la funcion
+*/
+/* 
+Single responsability: Cada funcion en tu codigo deberia tener una sola responsabilidad
+*/
+
+/* JSDOCS */
+/**
+ * Dado un precio numerico positivo devuelve el 21% que es el iva de ese precio
+ * @param {number} precio 
+ * @returns {number} 
+**/
+function calcularIva(precio){
+    let iva = precio * 0.21
+    return iva
 }
 
+let iva_100 = calcularIva("100")
+console.log(iva_100)
+document.write('<h1>Mi iva es de $' + iva_100 + 'ARS</h1>')
+alert(calcularIva(200))
+
+
+/* 
+Crear la funcion sumar, que debera recibir 2 valores numericos (asumimos que son numeros)
+y debera devolver la suma de ambos numeros
+*/
+function sumar(a, b) {
+    return a + b;
+}
+
+
+/* 
+Practica recomendada
+
+)Imprime los números del 1 al 10
+2)Imprime los números pares del 2 al 20
+3)Imprime los números impares del 1 al 19
+4)Imprime los números del 10 al 1 en orden inverso
+5)Imprime los números del 1 al 10, pero se detiene al llegar al 5
+6)Imprime los números del 1 al 10, pero salta el 5
+
+7)Crea una función llamada decirNombre(nombre) y nos ejecute una alerta “Hola “ + nombre
+8)Crea una función llamada saludar(nombre) y nos devuelva un  string  “Hola “ + nombre y luego invoca la función dentro de una alerta
+9)Crea una función llamada sumar(a,b) y nos devuelva la suma de a y b
+10)Crea una función llamada restar(a,b) y nos devuelva la resta de a y b
+
+*/
