@@ -41,7 +41,7 @@ let promedio = sumatoria / 3
 alert('El promedio resultante es ' + promedio) */
 
 
-let sumatoria = 0
+/* let sumatoria = 0
 let cantidad_de_notas = 3
 
 for(
@@ -59,14 +59,14 @@ for(
     sumatoria = sumatoria + numero
 }
 
-alert("El promedio resultante es " + (sumatoria / cantidad_de_notas))
+alert("El promedio resultante es " + (sumatoria / cantidad_de_notas)) */
 
 /* 
 Pedir una contraseña, si la contraseña es correcta deberemos decir por alerta ¨Contraseña correcta¨ y cortar el bucle.
 El limite de contraseñas es 5
 */
 
-let intentos_max = 5;
+/* let intentos_max = 5;
 const password = 'Mora123';
 for (
     let iterador = 1;
@@ -81,3 +81,28 @@ for (
         alert("Contraseña incorrecta");
     }
 }
+
+ */
+
+
+/* 
+Bucle while
+*/
+
+let password = 'pepe'
+let password_escrita = prompt("ingresa una contraseña")
+
+while(password_escrita != password){
+    password_escrita = prompt('Error, Ingresa nuevamente la contraseña')
+}
+
+alert('Contraseña correcta')
+
+/* 
+La palabra prohebida
+Solicitar al usuario una palabra
+Mientras el usuario no diga 'voldermort' volver a pedirle una palabra. Si lo escribio, decir 'Ese nombre no se puede decir'
+
+Solicitar un numero positivo
+Vamos a solicitar por prompt un dato, ese dato debe ser si o si un numero positivo que no puede ser NaN. Si no cumple volver a solicitar
+*/
