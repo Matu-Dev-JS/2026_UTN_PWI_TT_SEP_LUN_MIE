@@ -211,6 +211,7 @@ let precio = prompt("Ingrese el precio del producto");
 if (precio > 2500) {
     alert("Es muy caro");
 }
+
 else{
     alert("Es un precio economico")
 }
@@ -223,3 +224,5 @@ else {
     alert("algo")
 }
  */
+
+
