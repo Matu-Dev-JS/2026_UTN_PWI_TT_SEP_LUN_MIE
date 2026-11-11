@@ -37,7 +37,7 @@ let propiedad_buscada = 'nombre' //prompt('Ingresa la propiedad buscada')
 //console.log("El nombre del pais es " + pais.cant habitantes)
 
 //Notacion de corchetes
-console.log('El continente del pais es ' + pais.continente)
+/* console.log('El continente del pais es ' + pais.continente) */
 
 let persona = {
     'D.N.I': 55555555,
@@ -63,7 +63,7 @@ descuento: number
 
 Los datos son a eleccion.
 */
-
+/* 
 let producto_1 = {
     id: 1,
     titulo: 'Grandote guaymayen',
@@ -96,4 +96,90 @@ let sal = crearProducto('Sal', 'Alimento', 1, 'Paquete', 0.15)
 let yerba = crearProducto('Yerba', 'Alimento', 2, 'Paquete', 0.20)
 let mermelada = crearProducto('Mermelada', 'Alimento', 1, 'frasco', 0.15)
 
-console.log(sal)
+console.log(sal) */
+
+
+/* Arrays */
+
+/* 
+Sirven para enlistar datos
+Pueden enlistar cualquier tipo de dato
+Los arrays son listas ordenadas, el orden lo determina el indice de cada elemento
+*/
+//              0        1       2   
+let nombres = ['pepe', 'juan', 'maria']
+let notas = [1, 5, 10]
+let personas = [
+    {
+        id: 1,
+        nombre: 'pepe'
+    },
+    {
+        id: 2,
+        nombre: 'juan'
+    },
+    {
+        id: 3,
+        nombre: 'maria'
+    }
+]
+
+
+
+//Quiero saber el id de la persona cuyo nombre es 'juan'
+
+for (let indice = 0; indice < personas.length; indice = indice + 1) {
+
+    if (personas[indice].nombre === 'juan') {
+        console.log("El id es " + personas[indice].id)
+    }
+}
+
+
+
+
+
+/* 
+Crear un array con 3 productos 
+
+Cada producto sera:
+titulo: string
+precio: number 
+id: number
+descripcion: string
+descuento: number
+
+Calcular la sumatoria de precios de todos los productos (con descuento aplicado) del array de productos
+*/
+
+
+let productos = [
+    {
+        titulo: "Remera negra",
+        precio: 1000,
+        id: 1,
+        descripcion: "Remera de algodón color negro",
+        descuento: 0
+    },
+    {
+        titulo: "Zapatillas deportivas",
+        precio: 1000,
+        id: 2,
+        descripcion: "Zapatillas livianas para correr",
+        descuento: 10
+    },
+    {
+        titulo: "Mochila urbana",
+        precio: 1000,
+        id: 3,
+        descripcion: "Mochila con compartimento para notebook",
+        descuento: 0
+    }
+]
+
+let precio_final = 0;
+for(let i = 0; i < productos.length; i = i + 1){
+    let producto = productos[i]
+    precio_final = precio_final + (producto.precio - (producto.precio * (producto.descuento / 100)));
+}
+console.log("\nel precio final es: %d ", precio_final);
