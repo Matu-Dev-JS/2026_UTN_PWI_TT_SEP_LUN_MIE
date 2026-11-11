@@ -272,3 +272,13 @@ console.log(personas)
 /* 
 Recorrer la lista de productos, cuando encuentren el producto buscado deberan devolver el producto en si (objeto)
 */
+
+function buscarProductoPorId(id_producto){
+    for (let producto of productos){
+        if(Number(producto.id) === Number(id_producto)){
+            return producto;
+        }
+    }
+}
+
+console.log(buscarProductoPorId(1))
