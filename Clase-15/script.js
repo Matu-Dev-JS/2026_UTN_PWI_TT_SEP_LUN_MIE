@@ -109,7 +109,7 @@ Los arrays son listas ordenadas, el orden lo determina el indice de cada element
 //              0        1       2   
 let nombres = ['pepe', 'juan', 'maria']
 let notas = [1, 5, 10]
-let personas = [
+/* let personas = [
     {
         id: 1,
         nombre: 'pepe'
@@ -123,17 +123,17 @@ let personas = [
         nombre: 'maria'
     }
 ]
-
+ */
 
 
 //Quiero saber el id de la persona cuyo nombre es 'juan'
 
-for (let indice = 0; indice < personas.length; indice = indice + 1) {
+/* for (let indice = 0; indice < personas.length; indice = indice + 1) {
 
     if (personas[indice].nombre === 'juan') {
         console.log("El id es " + personas[indice].id)
     }
-}
+} */
 
 
 
@@ -177,9 +177,98 @@ let productos = [
     }
 ]
 
-let precio_final = 0;
-for(let i = 0; i < productos.length; i = i + 1){
+
+/* for(let i = 0; i < productos.length; i = i + 1){
     let producto = productos[i]
+    precio_final = precio_final + (producto.precio - (producto.precio * (producto.descuento / 100)));
+} */
+
+/* let precio_final = 0;
+for(let producto of productos){
     precio_final = precio_final + (producto.precio - (producto.precio * (producto.descuento / 100)));
 }
 console.log("\nel precio final es: %d ", precio_final);
+
+for(let producto of productos){
+    console.log("Producto: " + producto.titulo)
+} */
+
+
+/* 
+Metodos de arrays
+Acciones que podemos hacer dentro de un mismo array, ejemplo agregar, eliminar verificar algo
+*/
+
+let nombres_2 = ['pepe', 'juan', 'maria', 'jose']
+
+
+//push: Agrega un elemento al final del array
+//nombres_2.push('maria')
+
+//unshift: Agrega un elemento al principio del array
+//nombres_2.unshift('jorge')
+
+//shift: Eliminar el primer elemento de un array
+//nombres_2.shift()
+
+//pop: Eliminar el ultimo elemento de un array
+//nombres_2.pop()
+
+//includes: Saber si cierto elemento esta en el array
+//console.log(nombres_2.includes('juancito'))
+
+//indexOf: Saber el indice de un elemento
+//console.log(nombres_2.indexOf('juan'))
+
+//splice: Sirve para eliminar o agregar elementos en alguna posicion del array
+
+//let indice_juan = nombres_2.indexOf("juan")
+
+//Eliminar a juan
+//nombres_2.splice(indice_juan, 1)
+
+//Remplazar
+//nombres_2.splice(indice_juan, 1, 'marta')
+
+//Agregar en la posicion de algun elemento
+//nombres_2.splice(indice_juan, 0, 'marta')
+
+//console.log(nombres_2)
+
+/* 
+Eliminar un usuario por id
+*/
+let personas = [
+    {
+        id: 1,
+        nombre: 'pepe'
+    },
+    {
+        id: 2,
+        nombre: 'juan'
+    },
+    {
+        id: 3,
+        nombre: 'maria'
+    }
+]
+
+function eliminarUsuarioPorId(usuario_id){
+    for(let persona of personas){
+
+        if(persona.id === usuario_id){
+            
+            let indice = personas.indexOf(persona)
+            personas.splice(indice, 1)
+            break
+        }
+    }
+}
+
+eliminarUsuarioPorId(3)
+console.log(personas)
+
+//Buscar un producto por id
+/* 
+Recorrer la lista de productos, cuando encuentren el producto buscado deberan devolver el producto en si (objeto)
+*/
