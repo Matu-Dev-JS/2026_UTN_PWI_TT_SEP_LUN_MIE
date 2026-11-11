@@ -24,7 +24,7 @@ let pais = {
         nombre: "Ciudad autonoma de buenos aires",
         cant_habitantes: 6000000
     },
-    calcularIva: function (precio){
+    calcularIva: function (precio) {
         return precio * 0.21
     }
 }
@@ -45,7 +45,7 @@ let persona = {
     "domicilio declarado": 'Av siempre viva'
 }
 
-function formatPersona (persona_orginal){
+function formatPersona(persona_orginal) {
     return {
         dni: persona_orginal['D.N.I'],
         nombre_completo: persona_orginal['nombre completo'],
@@ -56,10 +56,44 @@ function formatPersona (persona_orginal){
 /* 
 Crear 3 objeto producto con las propiedades
 titulo: string
-precio: number
+precio: number 
 id: number
 descripcion: string
 descuento: number
 
 Los datos son a eleccion.
 */
+
+let producto_1 = {
+    id: 1,
+    titulo: 'Grandote guaymayen',
+    precio: 800,
+    descripcion: 'Alfajor Grandote de Guaymayen',
+    descuento: 15
+}
+
+let carne =
+{
+    titulo: "Carne",
+    precio: 5500,
+    id: 2,
+    descripcion: "pedazo de carne vacuna",
+    descuento: 0
+};
+
+function crearProducto(titulo, producto, id, descripcion, descuento) {
+    let producto_generado = {
+        titulo: titulo,
+        producto: producto,
+        id: id,
+        descripcion: descripcion,
+        descuento: descuento
+    }
+
+    return producto_generado
+}
+let sal = crearProducto('Sal', 'Alimento', 1, 'Paquete', 0.15)
+let yerba = crearProducto('Yerba', 'Alimento', 2, 'Paquete', 0.20)
+let mermelada = crearProducto('Mermelada', 'Alimento', 1, 'frasco', 0.15)
+
+console.log(sal)
