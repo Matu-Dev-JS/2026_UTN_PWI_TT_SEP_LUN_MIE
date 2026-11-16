@@ -132,6 +132,21 @@ Ejemplo de retorno: [
 */
 
 
+/* function renderCarrito() {
+    const resultado = [];
+    for (const producto of carrito) {
+        resultado.push(`<div>
+            <h3>${producto.titulo}</h3>
+            <div>Precio: $${producto.precio} ARS</div>
+            <div>Categoria: ${producto.categoria}</div>
+            <button>Comprar</button>
+            </div>`);
+    }
+    return resultado;
+}
+document.write(renderCarrito().join('')); */
+
+
 //Templates strings
 
 /* let persona = {
