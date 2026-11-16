@@ -23,7 +23,7 @@ const carrito = [
         categoria: 'hogar'
     },
     {
-        id: 3,
+        id: 50,
         titulo: 'tv samsung 32"',
         precio: 250,
         cantidad: 3,
@@ -182,4 +182,55 @@ decrementarItemCarritoPorId(item_id)
         Si no:
             - Modificar la propiedad cantidad en 1 menos
 
+
+Protip: 
+    - array.indexOf(item) => indice de ese item en el array (si existe), sino -1
+    - array.splice(nro_indice, 1) => eliminar 1 elemento de cierto indice
+*/
+
+function eliminarItemCarritoPorId(item_id){
+    let encontrado=false
+    for(let item of carrito){
+        if(item.id===item_id){
+            let indice=carrito.indexOf(item)
+            carrito.splice(indice,1)
+            encontrado=true
+            break
+        }
+    }
+    return  encontrado
+}
+
+function decrementarItemCarritoPorId(item_id) {
+    for (let item of carrito) {
+        if (item.id === item_id) {
+            if (item.cantidad > 1) {
+                item.cantidad = item.cantidad - 1
+            } else {
+                eliminarItemCarritoPorId(item_id);
+            }
+            return true
+        }
+    }
+    return false;
+}
+
+decrementarItemCarritoPorId(1)
+decrementarItemCarritoPorId(1)
+decrementarItemCarritoPorId(1)
+
+/* 
+generarNuevoId()
+    Extraer todos los ids del carrito
+    Buscara el id mas alto entre todos
+    Devolvera ese id + 1
+
+Ej: generarNuevoId() => 51 (porque el id mas alto es 50)
+
+agregarItemCarrito(titulo, precio, categoria)
+    Buscar en el carrito si ese producto ya esta agregado (por titulo)
+        Si lo esta:
+            Incrementar su cantidad en + 1
+        Si lo esta
+            Agregar al array el nuevo item (con un id unico usando la funcion generar nuevo id, y cantidad en 1)
 */
