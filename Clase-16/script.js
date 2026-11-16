@@ -91,3 +91,64 @@ Recorrera toda la lista de carrito y por cada item extraera el nombre y lo subir
 
 EJ: extraerNombresProductosDelCarrito() => ['tv samsung 52"', 'Espejo de mesa', 'tv samsung 32"']
 */
+
+/* function extraerNombresProductosDelCarrito() {
+    const nombres = [];
+    for (const item of carrito) {
+        nombres.push(item.titulo);
+    }
+    return nombres;
+}
+
+console.log(extraerNombresProductosDelCarrito()) */
+
+
+/* 
+Crear una funcion llamada renderCarrito()
+por cada elemento del carrito debera generar un string con este formato:
+    <div>
+        <h3>titulo</h3>
+        <div>Precio: $precioARS</div>
+        <div>Categoria: categoria</div>
+        <button>Comprar</button>
+    </div>
+Devolver el array resultante 
+
+Ejemplo de retorno: [
+    `<div>
+        <h3>Tv samsung</h3>
+        <div>Precio: $400 ARS</div>
+        <div>Categoria: tecnologia</div>
+        <button>Comprar</button>
+    </div>`,
+    `<div>
+        <h3>Espejo de mesa</h3>
+        <div>Precio: $40 ARS</div>
+        <div>Categoria: hogar</div>
+        <button>Comprar</button>
+    </div>`
+]
+
+*/
+
+
+//Templates strings
+
+/* let persona = {
+    nombre: "pepe",
+    edad: 35,
+    apellido: 'suarez'
+} */
+
+//Con strings normales
+/* console.log('La persona ' + persona.nombre + " tiene " + persona.edad + ' y su apellido es ' + persona.apellido) */
+
+//Con template strings seria:
+/* console.log(`La persona ${persona.nombre} tiene ${persona.edad} años y su apellido es ${persona.apellido}`)
+document.write(`
+    <div>
+        <h2>${persona.nombre} ${persona.apellido}</h2>
+        <div>Edad: ${persona.edad}</div>
+        <hr/>
+    </div>
+`) */
