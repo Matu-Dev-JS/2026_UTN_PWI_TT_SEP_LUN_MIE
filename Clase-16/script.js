@@ -59,13 +59,13 @@ Un filtro es, recorrer toda una lista buscando los elementos que cumplan con cie
 
 */
 
-function filtrarProductosCarritoPorCategoria(categoria) {
+/* function filtrarProductosCarritoPorCategoria(categoria) {
     let resultado = [];
 
     if(!categoria){
         return resultado
     }
-    
+
     for (let producto of carrito) {
         if (producto.categoria.toLowerCase().trim().includes(categoria.toLowerCase().trim())) {
             resultado.push(producto);
@@ -73,4 +73,21 @@ function filtrarProductosCarritoPorCategoria(categoria) {
     }
     return resultado;
 }
-console.log(filtrarProductosCarritoPorCategoria(""))
+console.log(filtrarProductosCarritoPorCategoria("")) */
+
+/* 
+Un mapeo es generar un array a partir de otro array
+EJ: ['pepe', 'juan', 'jose'] => [{nombre: 'pepe'}, {nombre: 'juan'}, {nombre: 'jose'}]
+
+En el map:
+    Siempre se devuelve un array
+    El array siempre tendra la misma longitud que el array original
+
+*/
+
+/* 
+extraerNombresProductosDelCarrito() 
+Recorrera toda la lista de carrito y por cada item extraera el nombre y lo subira al array resultante
+
+EJ: extraerNombresProductosDelCarrito() => ['tv samsung 52"', 'Espejo de mesa', 'tv samsung 32"']
+*/
