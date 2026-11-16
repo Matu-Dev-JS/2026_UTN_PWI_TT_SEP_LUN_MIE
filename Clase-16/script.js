@@ -167,3 +167,19 @@ document.write(`
         <hr/>
     </div>
 `) */
+
+
+
+/* 
+eliminarItemCarritoPorId(item_id)
+    Eliminar el elemento del carrito, si no encuentra el item cuyo id sea igual al recibido debe devolver false, si lo pudo eliminar debe devolver true.
+
+decrementarItemCarritoPorId(item_id)
+    Buscar el item en carrito por su id, si no existe devolver false.
+    Si existe dependiendo de la cantidad 
+        Si es 1:
+            - Llamar a la funcion eliminarItemCarritoPorId()
+        Si no:
+            - Modificar la propiedad cantidad en 1 menos
+
+*/
