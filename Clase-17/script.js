@@ -34,7 +34,60 @@ Por cada item la idea es mostrar
     <button>Eliminar</button>
     <hr>
 </div>
+
+2da parte:
+En la misma funcion de renderizarCarrito:
+- Llamar a un div/span debajo de la lista del carrito y sumarizar el total del carrito (items con precio x cantidad)
+- Podrian separar en una funcion el calcularTotalCarrito
+
 */
+
+function calcularTotalCarrito() {
+    let total = 0
+
+    for (let item of carrito) {
+        total = total + (item.precio * item.cantidad)
+    }
+
+    return total
+}
+
+function renderizarTotal() {
+    const carrito_total_HTML = document.getElementById('carrito-total')
+    let msj = `El total a pagar es de: $${calcularTotalCarrito()} ARS`
+
+    carrito_total_HTML.innerHTML = msj
+}
+
+function renderizarListaCarrito() {
+    const carrito_HTML = document.getElementById('carrito')
+
+    let resultado = "";
+
+    for (let item of carrito) {
+        resultado = resultado +
+            `<div>
+            <h2>${item.titulo}</h2>
+            <div>Precio: ${item.precio} ARS</div>
+            <div>Categoria: ${item.categoria}</div>
+            <button>-</button>
+            <span>${item.cantidad}</span>
+            <button>+</button>
+            <button>Eliminar</button>
+            <hr>
+        </div>`
+    }
+    carrito_HTML.innerHTML = resultado
+}
+
+function renderizarCarrito() {
+
+    renderizarListaCarrito()
+    renderizarTotal()
+}
+
+
+renderizarCarrito()
 
 
 /* 
@@ -98,11 +151,11 @@ const blogs = [
     }
 ]
 
-function renderizarBlogs (){
+function renderizarBlogs() {
     const blogs_HTML = document.getElementById('blogs')
 
     let resultado = ''
-    for(const blog of blogs){
+    for (const blog of blogs) {
 
         resultado = resultado + `
             <h1>${blog.titulo}</h1>
