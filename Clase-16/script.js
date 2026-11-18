@@ -215,9 +215,9 @@ function decrementarItemCarritoPorId(item_id) {
     return false;
 }
 
+/* decrementarItemCarritoPorId(1)
 decrementarItemCarritoPorId(1)
-decrementarItemCarritoPorId(1)
-decrementarItemCarritoPorId(1)
+decrementarItemCarritoPorId(1) */
 
 /* 
 generarNuevoId()
@@ -234,3 +234,41 @@ agregarItemCarrito(titulo, precio, categoria)
         Si lo esta
             Agregar al array el nuevo item (con un id unico usando la funcion generar nuevo id, y cantidad en 1)
 */
+
+/* function generarNuevoId(){
+    let next_id=0
+    for(let item of carrito){
+        if(Number(item.id)>next_id){
+            next_id=Number(item.id)
+        }
+    }
+    return next_id + 1
+}
+
+
+function agregarItemCarrito(titulo, precio, categoria) {
+    
+    for (const item of carrito) {
+        if (item.titulo.toLowerCase().trim() === titulo.toLowerCase().trim()) {
+            item.cantidad += 1;
+            return;
+        }
+    }
+
+    carrito.push({
+        id: generarNuevoId(),
+        titulo: titulo,
+        precio: precio,
+        cantidad: 1,
+        categoria: categoria
+    });
+
+}
+
+const tituloIngresado = prompt('Ingresá el título del producto');
+const precioIngresado = Number(prompt('Ingresá el precio'));
+const categoriaIngresada = prompt('Ingresá la categoría');
+
+
+agregarItemCarrito(tituloIngresado, precioIngresado, categoriaIngresada);
+console.log(carrito); */
