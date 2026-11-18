@@ -37,6 +37,24 @@ function setCarrito(value){
     renderizarCarrito()
 }
 
+function eliminarItemPorId(id){
+
+    const clon_carrito = [...carrito]
+
+    for(let item of clon_carrito)
+        if(item.id === id){
+            let indice=clon_carrito.indexOf(item)
+            clon_carrito.splice(indice,1)
+            break;
+        }
+    
+    setCarrito(clon_carrito)
+}
+
+
+
+
+
 
 /* 
 Crear la funcion llamada eliminarItemPorId
