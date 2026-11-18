@@ -1,4 +1,13 @@
-const carrito = [
+/* 
+En una aplicacion es normal que hayan estados, estos estados son los que se muestran en la aplicacion
+EJ: la hora es 17:30 entonces renderizamos un reloj en pantalla que marque ese valor, pero cuando esta hora cambie hay que actualizar para sincronizar dicho reloj
+
+Los estados pueden ser de cualquier tipo de dato
+Estos estados son INMUTABLES, para poder modificarlos usaremos una funcion de seteo
+*/
+
+
+let carrito = [
     {
         id: 1,
         titulo: 'tv samsung 52"',
@@ -21,6 +30,21 @@ const carrito = [
         categoria: 'tecnologia'
     }
 ]
+
+
+function setCarrito(value){
+    carrito = value
+    renderizarCarrito()
+}
+
+
+/* 
+Crear la funcion llamada eliminarItemPorId
+Que reciba un id de item y busque dentro del carrito y elimine el item del carrito
+
+DEBEN USARSE ESTADOS, es decir si vas a modificar a carrito, debes hacerlo mediante un clone
+*/
+
 
 /* 
 Crear una funcion llamada renderizarCarrito que llame a un elemento del HTML y renderize dentro de el la lista del carrito.
@@ -133,7 +157,7 @@ const mi_primer_blog = {
 renderBlog(mi_primer_blog) */
 
 
-const blogs = [
+let blogs = [
     {
         titulo: 'Hola, este es mi primer blog',
         descripcion: 'No se exactamente que decir',
@@ -150,6 +174,31 @@ const blogs = [
         fecha: '12/11/2026 15:48 HRS Argentina'
     }
 ]
+
+
+function setBlogs (value){
+    blogs = value
+    renderizarBlogs()
+}   
+
+
+function eliminarBlogs (){
+    setBlogs([])
+} 
+
+function agregarBlog(titulo, descripcion, fecha){
+    const clon_blogs = [...blogs]
+
+    clon_blogs.push({
+        titulo,
+        descripcion,
+        fecha
+    })
+
+    setBlogs(clon_blogs)
+}
+
+
 
 function renderizarBlogs() {
     const blogs_HTML = document.getElementById('blogs')
@@ -169,3 +218,6 @@ function renderizarBlogs() {
 }
 
 renderizarBlogs()
+
+
+
