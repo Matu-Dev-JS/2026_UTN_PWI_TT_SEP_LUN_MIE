@@ -62,11 +62,33 @@ function renderizarListaCarrito() {
             <button>-</button>
             <span>${item.cantidad}</span>
             <button>+</button>
-            <button>Eliminar</button>
+            <button 
+                class='btn-eliminar-item' 
+                data-id-item='${item.id}'
+            >Eliminar</button>
             <hr>
         </div>`
     }
     carrito_HTML.innerHTML = resultado
+
+    const btns_delete_item = document.getElementsByClassName('btn-eliminar-item')
+
+    for(const btn of btns_delete_item){
+        btn.addEventListener(
+            'click',
+            handleEliminarItemCarrito
+        )
+    }
+}
+
+
+function handleEliminarItemCarrito(evento){
+    const btnClicked = evento.target
+    const item_id_to_delete = btnClicked.getAttribute('data-id-item')
+
+    if(item_id_to_delete){
+        eliminarItemPorId(item_id_to_delete)
+    }
 }
 
 function renderizarCarrito() {
@@ -234,7 +256,9 @@ btnClick.addEventListener(
 
 /* 
 En el carrito implementar la funcionalidad al boton de:
-    - Eliminar: Eliminar el item del carrito
+    - Eliminar: Eliminar el item del carrito (HECHO)
+
+    TAREA PARA 25/11
     - Incrementar (+): Aumentar la cantidad del item en el carrito 1 mas
     - Decrementar (-): Decrementar la cantidad del item en el carrito a 1 menos
         Si la catidad es 1 deberia eliminar el item del carrito
