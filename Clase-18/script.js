@@ -229,3 +229,13 @@ btnClick.addEventListener(
     'click',
     alertar
 )
+
+
+
+/* 
+En el carrito implementar la funcionalidad al boton de:
+    - Eliminar: Eliminar el item del carrito
+    - Incrementar (+): Aumentar la cantidad del item en el carrito 1 mas
+    - Decrementar (-): Decrementar la cantidad del item en el carrito a 1 menos
+        Si la catidad es 1 deberia eliminar el item del carrito
+*/
