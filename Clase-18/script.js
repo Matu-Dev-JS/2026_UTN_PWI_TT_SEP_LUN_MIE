@@ -1,10 +1,3 @@
-/* 
-En una aplicacion es normal que hayan estados, estos estados son los que se muestran en la aplicacion
-EJ: la hora es 17:30 entonces renderizamos un reloj en pantalla que marque ese valor, pero cuando esta hora cambie hay que actualizar para sincronizar dicho reloj
-
-Los estados pueden ser de cualquier tipo de dato
-Estos estados son INMUTABLES, para poder modificarlos usaremos una funcion de seteo
-*/
 
 
 let carrito = [
@@ -37,52 +30,6 @@ function setCarrito(value) {
     renderizarCarrito()
 }
 
-function eliminarItemPorId(id) {
-
-    const clon_carrito = [...carrito]
-
-    for (let item of clon_carrito)
-        if (item.id === id) {
-            let indice = clon_carrito.indexOf(item)
-            clon_carrito.splice(indice, 1)
-            break;
-        }
-
-    setCarrito(clon_carrito)
-}
-
-
-
-
-
-
-/* 
-Crear la funcion llamada eliminarItemPorId
-Que reciba un id de item y busque dentro del carrito y elimine el item del carrito
-
-DEBEN USARSE ESTADOS, es decir si vas a modificar a carrito, debes hacerlo mediante un clone
-*/
-
-
-/* 
-Crear una funcion llamada renderizarCarrito que llame a un elemento del HTML y renderize dentro de el la lista del carrito.
-
-Por cada item la idea es mostrar
-<div>
-    <h2>{titulo}</h2>
-    <div>Precio: ${precio}ARS</div>
-    <div>Categoria: {Categoria}</div>
-    <button>+</button><span>{cantidad}</span><button>+</button>
-    <button>Eliminar</button>
-    <hr>
-</div>
-
-2da parte:
-En la misma funcion de renderizarCarrito:
-- Llamar a un div/span debajo de la lista del carrito y sumarizar el total del carrito (items con precio x cantidad)
-- Podrian separar en una funcion el calcularTotalCarrito
-
-*/
 
 function calcularTotalCarrito() {
     let total = 0
@@ -128,65 +75,46 @@ function renderizarCarrito() {
     renderizarTotal()
 }
 
+function eliminarItemPorId(id) {
+
+    const clon_carrito = [...carrito]
+
+    for (let item of clon_carrito)
+        if (item.id === id) {
+            let indice = clon_carrito.indexOf(item)
+            clon_carrito.splice(indice, 1)
+            break;
+        }
+
+    setCarrito(clon_carrito)
+}
+
+
+
 
 renderizarCarrito()
 
 
-/* 
-document es la interfaz con la que nos comunicaremos con el DOM (Document object model). Tiene la finalidad de representar todo el HTML en formato Objeto de JS
-*/
-
-//Console.dir muestra por consola sin aplicar formatos estilisticos 
-//console.dir(document)
-
-
-/* 
-document.getElementById es un metodo que permite buscar un elemento dentro del document
-SI el elemento buscado NO existe, entonces devuelve null
-*/
 const div = document.getElementById('contenedor-titulo')
 
 
-/* if(div){
-    div.innerText = 'pepe'
-}
-else{
-    console.error("Div con id contenedor titulo esta mal llamado")
-} */
-
-
-/* function renderBlog(blog){
-    if(div){
-        div.innerHTML = `
-            <h1>${blog.titulo}</h1>
-            <p>${blog.descripcion}</p>
-            <span>Fecha: ${blog.fecha}</span>
-            <hr/>
-        `
-    }
-}
-
-const mi_primer_blog = {
-    titulo: 'Hola, este es mi primer blog',
-    descripcion: 'No se exactamente que decir',
-    fecha: '18/11/2026 15:48 HRS Argentina'
-}
-
-renderBlog(mi_primer_blog) */
 
 
 let blogs = [
     {
+        id: 1,
         titulo: 'Hola, este es mi primer blog',
         descripcion: 'No se exactamente que decir',
         fecha: '18/11/2026 15:48 HRS Argentina'
     },
-    {
+    {   
+        id: 2,
         titulo: 'Como aprender JS',
         descripcion: 'Programando!',
         fecha: '16/11/2026 16:48 HRS Argentina'
     },
     {
+        id: 3,
         titulo: 'Es normal que cumpla años mi amigo cada año?',
         descripcion: 'Le pregunte a grok y no se que pensar...',
         fecha: '12/11/2026 15:48 HRS Argentina'
@@ -210,7 +138,8 @@ function agregarBlog(titulo, descripcion, fecha) {
     clon_blogs.push({
         titulo,
         descripcion,
-        fecha
+        fecha,
+        id: blogs.length + 1
     })
 
     setBlogs(clon_blogs)
@@ -228,11 +157,50 @@ function renderizarBlogs() {
             <h1>${blog.titulo}</h1>
             <p>${blog.descripcion}</p>
             <span>Fecha: ${blog.fecha}</span>
+            <button 
+                class='btn-delete-blog' 
+                data-blog-id='${blog.id}' 
+            >
+                eliminar
+            </button>
             <hr/>
         `
-        console.log(resultado)
     }
     blogs_HTML.innerHTML = resultado
+
+
+    /* 
+    Como las clases se pueden repetir al llamar a getElementsByClassName estamos llamando a lista de elementos que compartan esta clase
+    */
+    const buttons_delete_blog = document.getElementsByClassName('btn-delete-blog')
+
+    for(let btn of buttons_delete_blog){
+        btn.addEventListener(
+            'click',
+            handleDeleteBlog
+        )
+    }
+}
+
+
+/* 
+Las funciones asociadas a los eventos reciben como parametro el objeto event
+el objeto event contiene detalles de como sucedio el evento 
+*/
+function handleDeleteBlog(event){
+    //Para eliminar un blog necesito el ID del blog
+    const clicked_btn = event.target
+    const blog_id_to_delete = clicked_btn.getAttribute('data-blog-id')
+    
+    const blogs_cloned = [...blogs]
+    for(const blog of blogs_cloned){
+        if(Number(blog.id) === Number(blog_id_to_delete)){
+            const blog_index_to_delete = blogs_cloned.indexOf(blog)
+            blogs_cloned.splice(blog_index_to_delete, 1)
+            setBlogs(blogs_cloned)
+            return 
+        }
+    }
 }
 
 renderizarBlogs()
@@ -261,46 +229,3 @@ btnClick.addEventListener(
     'click',
     alertar
 )
-
-/* 
-Crear en el HTML un boton de - y otro de +
-Crear el estado contador
-El boton de - debe decrementar el contador (Hacer que valga 1 menos)
-El boton de + debe incrementar el contador (Hacer que valga 1 mas)
-
-
-Protips: 
-    - Contador es un estado
-    - Crear la funcion renderContador
-    - Asegurarse se usar el setContador para incrementar o decrementar el estado
-    - LOS ESTADOS SON INMUTABLES, SOLO SE PUEDEN ACTUALIZAR POR MEDIO DEL SETTER
-*/
-
-let contador = 0
-
-function renderContador() {
-    document.getElementById('contador').innerText = contador
-}
-
-function setContador(valor) {
-    contador = valor
-    renderContador()
-}
-
-function decrementar() {
-    setContador(contador - 1)
-}
-
-function incrementar() {
-    setContador(contador + 1)
-}
-
-document.getElementById('btn-decrementar').addEventListener(
-    'click', 
-    decrementar
-)
-document.getElementById('btn-incrementar').addEventListener(
-    'click',
-    incrementar
-)
-renderContador()
